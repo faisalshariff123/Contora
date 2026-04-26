@@ -22,7 +22,7 @@ if openrouter_key:
         api_key=openrouter_key,
     )
 else:
-    print("⚠️ WARNING: OPENROUTER_API_KEY not found. Falling back to non-AI text generation.")
+    print("WARNING: OPENROUTER_API_KEY not found. Falling back to regular text generation.")
     client = None
 
 
