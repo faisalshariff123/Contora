@@ -1,4 +1,4 @@
-# ◈ AccessCanvas
+# AccessCanvas
 ### Accessibility for Creators, Designed for Everyone.
 
 **AccessCanvas** is a full stack web application made to help digital creators, designers, and developers ensure that their content is accessible before it goes live. It automates WCAG 2.2 compliance checks for color contrast and uses AI to generate high quality alt-text and long descriptions.
