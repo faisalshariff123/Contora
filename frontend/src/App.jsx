@@ -71,7 +71,8 @@ export default function App() {
     const formData = new FormData()
     formData.append('image', image)
     try {
-      const { data } = await axios.post('http://localhost:5001/analyze', formData, {
+      // API URL updated to live Render backend
+      const { data } = await axios.post('https://contora.onrender.com/analyze', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       })
       setResults(data)
