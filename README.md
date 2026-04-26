@@ -49,5 +49,5 @@ The project is split into two distinct services to optimize performance and scal
 
 ### 1. Clone the repository
 ```bash
-git clone [https://github.com/faisalshariff123/Contora.git](https://github.com/faisalshariff123/Contora.git)
+git clone [https://github.com/faisalshariff123/AccessCanvas.git](https://github.com/faisalshariff123/AccessCanvas.git)
 cd Contora
