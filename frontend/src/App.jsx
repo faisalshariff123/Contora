@@ -2,7 +2,6 @@ import { useState, useRef } from 'react'
 import axios from 'axios'
 import './index.css'
 
-// ── tiny helpers ──────────────────────────────────────────────
 const copy = (text) => navigator.clipboard.writeText(text)
 
 function RatioBar({ ratio, required }) {
@@ -71,7 +70,6 @@ export default function App() {
     const formData = new FormData()
     formData.append('image', image)
     try {
-      // API URL updated to live Render backend
       const { data } = await axios.post('https://accesscanvas.onrender.com/analyze', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       })
@@ -79,7 +77,7 @@ export default function App() {
       setAltText(data.alt_text)
       setLongDescription(data.long_description)
     } catch (err) {
-      setError(err.response?.data?.error || 'Analysis failed — is the backend running?')
+      setError(err.response?.data?.error || 'Analysis failed, out of memory')
     } finally {
       setLoading(false)
     }
@@ -143,7 +141,6 @@ export default function App() {
         </div>
       </header>
 
-      {/* ── UPLOAD STATE ── */}
       {!preview && (
         <div style={{ maxWidth: 640, margin: '0 auto', paddingTop: '3rem' }}>
           <div style={{ marginBottom: '2rem', textAlign: 'center' }}>
@@ -186,7 +183,6 @@ export default function App() {
             </p>
           </div>
 
-          {/* stat chips */}
           <div style={{ display: 'flex', gap: 12, marginTop: '1.5rem', justifyContent: 'center' }}>
             {['Contrast check', 'OCR extraction', 'Alt text draft'].map((label) => (
               <div key={label} style={{
